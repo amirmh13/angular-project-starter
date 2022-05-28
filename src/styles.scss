@@ -1,3 +1,6 @@
+@import "./assets/fonts/iransans/iransans";
+@import "./assets/fonts/material-icons/material-icons";
+
 @import './assets/styles/material';
 @import './assets/styles/tailwind';
 @import './assets/styles/variables';
@@ -8,7 +11,7 @@ body {
     line-height: 24px;
     height: 100%;
     color: $text-body;
-    // font-family: iransans;
+    font-family: iransans;
     font-size: $default-fs;
   }
   
