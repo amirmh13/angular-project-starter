@@ -1,0 +1,17 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+    .disabled {
+      @apply  select-none opacity-75;
+    }
+
+    .row {
+        @apply flex flex-wrap;
+    }
+
+    .col {
+      @apply grow basis-0 shrink-0 px-2;
+    }
+  }

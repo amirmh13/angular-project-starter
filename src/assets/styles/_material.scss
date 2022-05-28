@@ -1,0 +1,100 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+$custom-primary: (
+  50: #fef2df,
+  100: #fcddb1,
+  200: #fac87e,
+  300: #f8b14b,
+  400: #f7a025,
+  500: #f59100,
+  600: #f18500,
+  700: #eb7600,
+  800: #e56600,
+  900: #db4b01,
+  A100: #ffffff,
+  A200: #dde6f3,
+  A400: #ececec,
+  A700: #ffbac8,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  ),
+);
+
+$custom-accent: (
+  50: #f9e7e5,
+  100: #fac7b8,
+  200: #f7a28b,
+  300: #f37e5d,
+  400: #f1613b,
+  500: #ef4318,
+  600: #e43e15,
+  700: #d73710,
+  800: #c9300b,
+  900: #b02203,
+  A100: #ffd180,
+  A200: #ffab40,
+  A400: #ff9100,
+  A700: #ff6d00,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  ),
+);
+
+$app-primary: mat.define-palette($custom-primary);
+$app-accent: mat.define-palette(
+  $custom-accent,
+  A200,
+  A100,
+  A400
+);
+
+$app-warn: mat.define-palette(mat.$red-palette);
+
+$custom-typography: mat.define-typography-config(
+  $font-family: iransans,
+);
+
+$app-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $app-primary,
+      accent: $app-accent,
+      warn: $app-warn,
+    ),
+    typography: $custom-typography,
+  )
+);
+
+@include mat.all-component-themes($app-theme);
+
+.cdk-visually-hidden {
+  width: 0 !important;
+}

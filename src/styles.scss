@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/material';
+@import './assets/styles/tailwind';
+@import './assets/styles/variables';
+
+body {
+    text-align: start;
+    background-color: $background;
+    line-height: 24px;
+    height: 100%;
+    color: $text-body;
+    // font-family: iransans;
+    font-size: $default-fs;
+  }
+  
+  * {
+    color: $text-body;
+  }
